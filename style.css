@@ -1,10 +1,13 @@
 :root {
     --margin-top-width: 10px;
     --margin-side-width: 15px;
+    --color-hightlight: #F50;
+    --color-text-main: #EEE;
+    --color-background: #0D0D0D;
 }
 
 body {
-    background-color: #0D0D0D;
+    background-color: var(--color-background);
     margin: 0px;
 }
 
@@ -40,7 +43,7 @@ nav a {
     font-family: "bicyclette", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #EEE;
+    color: var(--color-text-main);
     opacity: 0.25;
     font-size: 14px;
     text-decoration: none;
@@ -59,7 +62,7 @@ nav a:hover {
     font-family: "bicyclette", sans-serif;
     font-weight: 800;
     font-style: normal;
-    color: #F50;
+    color: var(--color-hightlight);
     opacity: 0.5;
     font-size: 14px;
 }
