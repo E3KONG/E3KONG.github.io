@@ -1,8 +1,65 @@
+:root {
+    --margin-top-width: 10px;
+    --margin-side-width: 15px;
+}
+
 body {
     background-color: #0D0D0D;
+    margin: 0px;
 }
 
 h1 {
-    color: #FF5500;
+    font-family: "gridlite-pe-variable",sans-serif;
+    font-variation-settings: 'wght' 750, 'BACK' 150, 'RECT' 150, 'ELSH' 3;
+    color: #F50;
     font-size: 5rem;
+    margin: auto;
+}
+p {
+    font-family: "bicyclette", noto-sans-hk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #999;
+    font-size: 16px;
+}
+
+nav {
+    position: sticky; top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--margin-top-width) var(--margin-side-width);
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #eeeeee40;
+    backdrop-filter: blur(5px);
+    background-color: #00000080;
+}
+nav a {
+    font-family: "bicyclette", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #EEE;
+    opacity: 0.25;
+    font-size: 14px;
+    text-decoration: none;
+    transition: opacity 0.75s;
+}
+nav a:hover {
+    text-decoration: line-through;
+    opacity: 1;
+}
+#navicon {
+    position: fixed;
+    padding-top: var(--margin-top-width);
+    padding-left: var(--margin-side-width);
+    z-index: 100;
+
+    font-family: "bicyclette", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #F50;
+    opacity: 0.5;
+    font-size: 14px;
 }
