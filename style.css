@@ -3,6 +3,7 @@
     --margin-side-width: 15px;
     --color-hightlight: #F50;
     --color-text-main: #EEE;
+    --color-text-minor: #999;
     --color-background: #0D0D0D;
 }
 
@@ -10,7 +11,23 @@ body {
     background-color: var(--color-background);
     margin: 0px;
 }
+.split{
+    height: 100%;
+    width: 90%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+div.left {
+    left: 0;
+}
+div.right {
+    right: 0;
+    border-left: 1px solid #99999940 ;
+    margin: 10px; 
+}
 
+/* general text */
 h1 {
     font-family: "gridlite-pe-variable",sans-serif;
     font-variation-settings: 'wght' 750, 'BACK' 150, 'RECT' 150, 'ELSH' 3;
@@ -24,11 +41,59 @@ p {
     font-style: normal;
     color: #999;
     font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 0px; margin: 0px;
+}
+h3 {
+    font-family: "bicyclette", noto-sans-hk, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #999;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    padding: 0px; margin: 0px;
+    margin-top: -3px
 }
 
+/* work index block */
+div.indexblock-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #999;
+}
+div.indexblock-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 5px;
+}
+hr.indexblock {
+    border: 0.5px solid #999;
+}
+div.indexblock-category {
+    display: flex;
+    gap: 10px;
+    align-self: flex-end;
+}
+.indexblock-category .category {
+    stroke: #F50;
+    stroke-width: 1px;
+    width: 10; height: 10;
+    padding-right: 5px;
+    transition: fill 0.5s;
+}
+.indexblock-category p:hover .category {
+    fill: #F50;
+}
+
+/* navigation bar */
 nav {
     position: sticky; top: 0;
     width: 100%;
+    z-index: 100;
     box-sizing: border-box;
     padding: var(--margin-top-width) var(--margin-side-width);
     display: inline-flex;
@@ -57,7 +122,7 @@ nav a:hover {
     position: fixed;
     padding-top: var(--margin-top-width);
     padding-left: var(--margin-side-width);
-    z-index: 100;
+    z-index: 101;
 
     font-family: "bicyclette", sans-serif;
     font-weight: 800;
